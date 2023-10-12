@@ -1,0 +1,32 @@
+int emptyOr, newValue, row, column;
+if (maze[yValue - 1][xValue - 1] == 0 && maze[yValue - 1][xValue + 1] == 0 &&
+    yValue != -1) {
+    emptyOr = rand() % 100;
+	if (emptyOr <= 20) {
+		maze[yValue - 1][xValue] = 1;
+    }
+}
+if (maze[yValue - 1][xValue - 1] == 0 && maze[yValue + 1][xValue - 1] == 0 &&
+    xValue != -1) {
+    emptyOr = rand() % 100;
+    if (emptyOr <= 20) {
+        maze[yValue][xValue - 1] = 1;
+    }
+}
+if (maze[yValue + 1][xValue - 1] == 0 && maze[yValue + 1][xValue + 1] == 0 &&
+    yValue != dimension - 1) {
+    emptyOr = rand() % 100;
+    if (emptyOr <= 20) {
+        maze[yValue + 1][xValue] = 1;
+    }
+}
+if (maze[yValue - 1][xValue + 1] == 0 && maze[yValue + 1][xValue + 1] == 0 &&
+    xValue != dimension - 1) {
+    emptyOr = rand() % 100;
+    if (emptyOr <= 20) {
+        maze[yValue][xValue + 1] = 1;
+    }
+}
+SCRIPTARG dimension,Integer
+SCRIPTARG (*maze)[dimension],Integer
+

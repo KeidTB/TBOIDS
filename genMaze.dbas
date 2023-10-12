@@ -1,0 +1,14 @@
+int mapGrid[height][width];
+int row, column;
+int currentX = (height + 1) / 2;
+int currentY = (width + 1) / 2;
+for (row = 1; row <= height; ++row) {
+  for (column = 1; column <= width; ++column) {
+    mapGrid[row][column] = 0;
+  }
+}
+mapGrid[currentY][currentX] = 1;
+--currentY;
+genRoom(mapGrid, currentY, currentX);
+SCRIPTARG height,Integer
+SCRIPTARG width,Integer
